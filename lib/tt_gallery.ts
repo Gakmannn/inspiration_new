@@ -1,7 +1,10 @@
 import { mergeAttributes, Node } from '@tiptap/core'
 import { VueNodeViewRenderer } from '@tiptap/vue-3'
-
 import GalleryComponent from '~/components/GalleryComponentTipTap.vue'
+
+// https://github.com/open-webui/open-webui
+// https://tproger.ru/articles/zapuskaem-lokalno-deepseek-r1-dlya-prilozheniya-rag
+// https://github.com/comfyanonymous/ComfyUI
 
 export default Node.create({
   name: 'vueComponent',
