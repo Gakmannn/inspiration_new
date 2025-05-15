@@ -152,26 +152,27 @@ const upload = async () => {
 
 const save = async () => {
   if (post.value && userStore.user?.id) {
-    post.value.title_en = translit(post.value.title)
-    post.value.text = editor.value?.getHTML().replaceAll('<p></p>', '<br>') || ''
-    const firstImgStartIndex = post.value.text.indexOf('<img src="')
-    if (firstImgStartIndex!=-1) {
-      const firstImgEndIndex = post.value.text.indexOf('"',firstImgStartIndex+10)
-      post.value.img = post.value.text.slice(firstImgStartIndex+10, firstImgEndIndex)
-    }
-    const firstPStartIndex = post.value.text.indexOf('<p>')
-    if (firstPStartIndex!=-1) {
-      const firstPEndIndex = post.value.text.indexOf('</p>',firstPStartIndex+3)
-      post.value.preview = post.value.text.slice(firstPStartIndex+3, firstPEndIndex).replace(/<[^>]*>/g, '')
-    }
-    post.value.author_id = userStore.user.id
-    post.value.rubric_id = rubric_id.value
+    // post.value.title_en = translit(post.value.title)
+    // post.value.text = editor.value?.getHTML().replaceAll('<p></p>', '<br>') || ''
+    console.log(editor.value?.getJSON())
+    // const firstImgStartIndex = post.value.text.indexOf('<img src="')
+    // if (firstImgStartIndex!=-1) {
+    //   const firstImgEndIndex = post.value.text.indexOf('"',firstImgStartIndex+10)
+    //   post.value.img = post.value.text.slice(firstImgStartIndex+10, firstImgEndIndex)
+    // }
+    // const firstPStartIndex = post.value.text.indexOf('<p>')
+    // if (firstPStartIndex!=-1) {
+    //   const firstPEndIndex = post.value.text.indexOf('</p>',firstPStartIndex+3)
+    //   post.value.preview = post.value.text.slice(firstPStartIndex+3, firstPEndIndex).replace(/<[^>]*>/g, '')
+    // }
+    // post.value.author_id = userStore.user.id
+    // post.value.rubric_id = rubric_id.value
     
-    const req = await $fetch('/api/post', {
-      method: 'POST',
-      body: post.value
-    })
-    navigateTo('/lk')
+    // const req = await $fetch('/api/post', {
+    //   method: 'POST',
+    //   body: post.value
+    // })
+    // navigateTo('/lk')
   
   }
 }
