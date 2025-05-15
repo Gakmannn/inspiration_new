@@ -5,17 +5,23 @@
     border: 2px solid gray;
     border-radius: 5px;
     font-weight: 600;
+    box-shadow: 3px 3px 10px rgba(134, 134, 134, 0.781);
+    /* box-shadow: 0 0 16px #acc1d8a6; */
 }
 
 .tt button:hover {
-    box-shadow: 0 0 5px 1px gray inset;
+    box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.76) inset;
+}
+
+.tt button:active {
+    transform: translate(3px, 3px);
 }
 
 .tiptap {
     min-height: 1000px;
     margin-top: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
 }
 
 .tiptap p {
@@ -28,34 +34,55 @@
 
 .tiptapImg {
     margin-top: 200px;
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
 }
 
 .label_rubric_create {
     font-weight: 600;
-    /* display: inline-block; */
+    padding: 10px 5px 10px 20px;
+    vertical-align: calc(-10px);
 }
 
 .rubric_create {
     margin-top: 20px;
-    margin-right: 20px;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 5px;
 }
-
 
 .myEditor {
     width: 500px;
     margin-top: 20px;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid gray;
     border-radius: 5px;
+}
+
+.uploadPicBut {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(134, 134, 134, 0.781);
+
+}
+
+.uploadPicBut:hover {
+    box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.76) inset;
+}
+
+.uploadPicBut:active {
+    transform: translate(3px, 3px);
 }
 
 .deletPostButtom {
     display: block;
     margin-top: 150px;
     transition: 0.5s;
+    box-shadow: 3px 3px 10px rgba(134, 134, 134, 0.781);
+
 }
 
 .deletPostButtom:hover {

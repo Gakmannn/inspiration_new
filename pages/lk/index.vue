@@ -5,7 +5,10 @@
     <h1 class="lk_h1">Личный кабинет</h1>
     <div class="nickname" v-if="userStore.user">
       <p>Ваш ник: </p>
-      <h2>{{ userStore.user.name }}</h2>
+      <div>
+        <input type="text" name="nickname" v-model="userStore.user.name" placeholder="Введите Ваш ник">
+        <button @click="saveNickname">Сохранить</button>
+      </div>
     </div>
 
     <div class="tabs" v-if="!userStore.user">
@@ -109,6 +112,13 @@ const handleRegister = async () => {
     registerError.value = 'Ошибка регистрации. Возможно, email уже занят';
   }
 };
+
+const saveNickname = async () => {
+  $fetch('/api/user_name',{
+    method: 'PUT',
+    body: userStore.user
+  })
+}
 
 // Функция для загрузки публикаций
 const fetchPosts = async () => {
